@@ -1,8 +1,12 @@
+import Carousel from "./Carousel";
+import Gallery from "./Gallery";
+
 
 const Home = () => {
     return (
         <div>
-            <h2>This is Home</h2>
+            <Carousel></Carousel>
+            <Gallery></Gallery>
         </div>
     );
 };
