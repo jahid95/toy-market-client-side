@@ -1,10 +1,30 @@
 import { Link } from "react-router-dom";
-import login from '../../../../src/assets/login/Capture-removebg-preview.png'
+import login from '../../../../src/assets/login/Capture-removebg-preview.png';
+import google from '../../../assets/login/google-sign-in-2023-01-04 00-00-00-2023-03-13 13-05-41.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+
 
 
 const Register = () => {
+  const {createAccount} = useContext(AuthContext)
     const handleRegister = event =>{
-        event.preventDefault();
+      event.preventDefault();
+      const form = event.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const password = form.password.value;
+      console.log(name, email, password)
+      createAccount(email,password)
+      .then(result =>{
+        const user = result.user;
+        console.log(user);
+      })
+      .then(error =>{
+        console.log(error);
+      })
+
+      
     }
     return (
         <div className="hero min-h-screen bg-base-200 mb-12">
@@ -19,9 +39,9 @@ const Register = () => {
             <form onSubmit={handleRegister}>
             <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text">Photo</span>
                 </label>
-                <input type="text" placeholder="name" name='name' className="input input-bordered" />
+                <input type="text" placeholder="photo url" name='photo' className="input input-bordered" />
               </div>
             <div className="form-control">
                 <label className="label">
@@ -40,7 +60,11 @@ const Register = () => {
               <input className="btn bg-red-600" type="submit" value="Login" />
               </div>
             </form>
-            <p className='text-center my-8'>Already have an account ?<Link to='/login' className='text-red-600 font-bold '> Login</Link> </p>
+            <p className="text-xl font-semibold text-center my-2">Or</p>
+            
+            <button className="text-center flex ml-28 text-xl font-semibold text-blue-500 my-2">Sign In<img className="w-8 h-8" src={google} alt="" /></button>
+
+            <p className='text-center mb-4'>Already have an account ?<Link to='/login' className='text-red-600 font-bold '> Login</Link> </p>
 
             </div>
           </div>

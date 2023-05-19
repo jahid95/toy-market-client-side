@@ -1,14 +1,26 @@
 
 import { Link } from 'react-router-dom';
-import login from '../../../../src/assets/login/Capture-removebg-preview.png'
+import login from '../../../../src/assets/login/Capture-removebg-preview.png';
+import google from '../../../assets/login/google-sign-in-2023-01-04 00-00-00-2023-03-13 13-05-41.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Login = () => {
+  const {logIn} = useContext(AuthContext);
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email,password);
+
+        logIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.log(error));
 
     }
     return (
@@ -41,6 +53,10 @@ const Login = () => {
               <input className="btn bg-red-600" type="submit" value="Login" />
               </div>
             </form>
+            <p className="text-xl font-semibold text-center my-2">Or</p>
+            
+            <button className="text-center flex ml-28 text-xl font-semibold text-blue-500 my-2">Sign In<img className="w-8 h-8" src={google} alt="" /></button>
+
             <p className='text-center my-8'>New in Kids Cars ?<Link to='/signup' className='text-red-600 font-bold '> SignUp</Link> </p>
 
             </div>
