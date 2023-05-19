@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import login from '../../../../src/assets/login/Capture-removebg-preview.png'
 
 const Login = () => {
@@ -40,6 +41,7 @@ const Login = () => {
               <input className="btn bg-red-600" type="submit" value="Login" />
               </div>
             </form>
+            <p className='text-center my-8'>New in Kids Cars ?<Link to='/signup' className='text-red-600 font-bold '> SignUp</Link> </p>
 
             </div>
           </div>
