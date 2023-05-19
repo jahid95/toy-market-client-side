@@ -4,9 +4,26 @@ import login from '../../../../src/assets/login/Capture-removebg-preview.png';
 import google from '../../../assets/login/google-sign-in-2023-01-04 00-00-00-2023-03-13 13-05-41.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../../../firebase.config';
 
 const Login = () => {
   const {logIn} = useContext(AuthContext);
+
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const handleSignGoogle =()=>{
+      signInWithPopup(auth,provider)
+      .then(result =>{
+          const user = result.user;
+          console.log('google',user);
+      })
+      .catch(error => {
+          console.log('error', error.message);
+      })
+  }
+
 
     const handleLogin = event => {
         event.preventDefault();
@@ -55,7 +72,7 @@ const Login = () => {
             </form>
             <p className="text-xl font-semibold text-center my-2">Or</p>
             
-            <button className="text-center flex ml-28 text-xl font-semibold text-blue-500 my-2">Sign In<img className="w-8 h-8" src={google} alt="" /></button>
+            <button onClick={handleSignGoogle} className="text-center flex ml-28 text-xl font-semibold text-blue-500 my-2">Sign In<img className="w-8 h-8" src={google} alt="" /></button>
 
             <p className='text-center my-8'>New in Kids Cars ?<Link to='/signup' className='text-red-600 font-bold '> SignUp</Link> </p>
 
