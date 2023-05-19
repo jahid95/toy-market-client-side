@@ -30,9 +30,9 @@ const Navbar = () => {
       <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>Blogs</a></li>
     </ul>
   </div>
-  <div className="navbar-end">
+  <Link to='/login' className="navbar-end">
     <a className="btn">Login</a>
-  </div>
+  </Link>
 </div>
     );
 };
