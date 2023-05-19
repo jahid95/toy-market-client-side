@@ -18,16 +18,16 @@ const Navbar = () => {
     <Link to="/" className="btn btn-ghost normal-case text-xl">
         <img className='w-28 h-16' src={logo} alt="" />
         <div className='d-flex flex-row text-left ml-4'> 
-        <h3 className='text-orange-600 text-2xl'>Kids<span>Cars</span></h3>
+        <h3 className='text-red-600 text-3xl'>Kids<span className='text-white bg-black'>Cars</span></h3>
         <small className='text-gray-500 font-thin'>For Adventure Kids...</small>
         </div>
     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>All Toys</a></li>
-      <li><a>Blogs</a></li>
+      <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>Home</a></li>
+      <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>All Toys</a></li>
+      <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>Blogs</a></li>
     </ul>
   </div>
   <div className="navbar-end">

@@ -1,4 +1,4 @@
-import img1 from '../../../src/assets/banner/closeup-shot-small-toy-car-wooden-train-track_181624-32510.avif';
+import img1 from '../../../src/assets/banner/model-truck_248415-3263.jpg';
 import img2 from '../../../src/assets/banner/colorful-car-toys_1194-2341.avif';
 import img3 from '../../../src/assets/banner/supply-chain-representation-with-yellow-truck_23-2149853111.avif';
 import img4 from '../../../src/assets/banner/funny-illustrated-car-painted-rainbow-colors_183364-23794.avif';
@@ -10,7 +10,7 @@ const Carousel = () => {
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={img1} className="w-full rounded-xl" />
                 <div className="absolute rounded-full flex items-center h-full right-[100px] top-[220px]">
-                <div className='text-white space-y-7 bg-red-500 rounded-lg opacity-75 p-6'>
+                <div className='text-white space-y-7 bg-red-500 rounded-lg p-6'>
                         
                         <div>
                             <button className="btn btn-primary mr-5">Offer 20%</button>

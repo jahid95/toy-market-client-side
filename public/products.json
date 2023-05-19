@@ -1,0 +1,78 @@
+
+    [
+      {
+        "name": "Toy Car 1",
+        "category": "fire-truck",
+        "image": "https://as1.ftcdn.net/v2/jpg/05/23/52/26/1000_F_523522609_Sl0hEYjrgBVB35tyF1jEtDErUBmsZRKS.jpg",
+        "price": 9.99,
+        "rating": 4.5,
+        "id": 1
+      },
+      {
+        "name": "Toy Car 2",
+        "category": "Off-Road",
+        "image": "https://as2.ftcdn.net/v2/jpg/01/77/54/87/1000_F_177548745_RoP77sEX2EHAnb7gjiaApzutefx39P6R.jpg",
+        "price": 12.99,
+        "id": 2,
+        "rating": 4.2
+      },
+      {
+        "name": "Toy Car 3",
+        "category": "Classic",
+        "image": "https://as2.ftcdn.net/v2/jpg/04/93/88/77/1000_F_493887719_c8lkXJEdOvbB19EnPPymPS1sdHrIDbCC.jpg",
+        "price": 7.99,
+        "rating": 3.8,
+        "id": 3
+      },
+      {
+        "name": "Toy Car 4",
+        "category": "fire-truck",
+        "image": "https://as2.ftcdn.net/v2/jpg/04/19/91/43/1000_F_419914334_12R8vAfJVAiQgN5Fpfq9Op5fXKfNrl2i.jpg",
+        "price": 14.99,
+        "rating": 4.9,
+        "id": 4
+      },
+      {
+        "name": "Toy Car 5",
+        "category": "pickup",
+        "image": "https://as1.ftcdn.net/v2/jpg/03/03/31/02/1000_F_303310295_hL3zkJIW9Xm7sNtfTD6eKi6fPgcc3Sia.jpg",
+        "price": 10.99,
+        "rating": 4.7,
+        "id": 5
+      },
+      {
+        "name": "Toy Car 6",
+        "category": "pickup",
+        "image": "https://as2.ftcdn.net/v2/jpg/04/19/93/15/1000_F_419931591_6KNoYiypwnO6rPO18KrD1oewBChONOaK.jpg",
+        "price": 6.99,
+        "rating": 3.5,
+        "id": 6
+      },
+      {
+        "name": "Toy Car 7",
+        "category": "Police",
+        "image": "https://as2.ftcdn.net/v2/jpg/02/36/22/01/1000_F_236220115_3PnIyM6b4aKvxxdaxrcyz8cJd2iWBcl4.jpg",
+        "price": 8.99,
+        "rating": 4.0,
+        "id": 7
+      },
+      {
+        "name": "Toy Car 8",
+        "category": "Classic",
+        "image": "https://as2.ftcdn.net/v2/jpg/02/35/70/31/1000_F_235703157_7WddcLZWjZ3NYb6tlsgP9Gp9Xzl94uF1.jpg",
+        "price": 11.99,
+        "rating": 4.6,
+        "id": 8
+      },
+      {
+        "name": "Toy Car 9",
+        "category": "Police",
+        "image": "https://as1.ftcdn.net/v2/jpg/02/36/21/70/1000_F_236217053_aYZSNeafVS8rrhqWGXyv5c39e1NCQCNr.jpg",
+        "price": 9.49,
+        "rating": 4.3,
+        "id": 9
+      }
+    ]
+  
+  
+  

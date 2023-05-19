@@ -4,38 +4,38 @@ import img3 from '../../../src/assets/gallery/isolated-realistic-shiny-blue-eleg
 import img4 from '../../../src/assets/gallery/isolated-realistic-shiny-red-classic-elegant-sedan-car-from-top-left-rear-view_16145-4533.jpg';
 const Gallery = () => {
     return (
-        <div>
-            <h2 className='text-3xl text-left text-gray-500 font-bold my-4 opacity-70 py-4 rounded-lg'>|| Toys Gallery</h2>
+        <div className='mb-4'>
+            <h2 className='text-3xl text-left text-red-600 font-bold my-4 opacity-70 py-4 rounded-lg'>| Toys Gallery</h2>
             <div className="carousel rounded-box">
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img1} alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img2} alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img3} alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img4} alt="Burger" />
-  </div> 
-  
-</div>
-<div className="carousel rounded-box">
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img1} alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img2} alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img3} alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img className='w-72 h-36' src={img4} alt="Burger" />
-  </div> 
-  
-</div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img1} alt="Burger" />
+                </div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img2} alt="Burger" />
+                </div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img3} alt="Burger" />
+                </div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img4} alt="Burger" />
+                </div>
+
+            </div>
+            <div className="carousel rounded-box">
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img1} alt="Burger" />
+                </div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img2} alt="Burger" />
+                </div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img3} alt="Burger" />
+                </div>
+                <div className="carousel-item">
+                    <img className='w-72 h-36' src={img4} alt="Burger" />
+                </div>
+
+            </div>
         </div>
     );
 };
