@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Products = ({ product }) => {
-    const {image} = product;
+    const {image,_id} = product;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -14,7 +14,7 @@ const Products = ({ product }) => {
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <div className="card-actions justify-end">
                         <div className="badge badge-outline bg-red-600 text-white px-4 py-4">Buy Now</div>
-                        <Link className="badge badge-outline  text-red-600 px-4 py-4">View Details</Link>
+                        <Link to={`/detail/${_id}`} className="badge badge-outline  text-red-600 px-4 py-4">View Details</Link>
                     </div>
                 </div>
             </div>

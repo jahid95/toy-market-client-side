@@ -35,9 +35,22 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>Home</a></li>
-      <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>All Toys</a></li>
-      <li className='text-red-500 mr-4 rounded-lg font-semibold'><a>Blogs</a></li>
+      <li className='text-red-500 mr-2 rounded-lg font-semibold'><a>Home</a></li>
+      <li className='text-red-500 mr-2 rounded-lg font-semibold'><a>All Toys</a></li>
+      <li>
+      {
+        user && 
+        <Link to='/addtoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>Add Toys</a></Link>
+        
+      }
+      </li>
+      <li>
+        {
+          user && <Link to='/addtoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>My Toys</a></Link>
+          
+        }
+      </li>
+      <li className='text-red-500 mr-2 rounded-lg font-semibold'><a>Blogs</a></li>
     </ul>
   </div>
   <div className="navbar-end">
