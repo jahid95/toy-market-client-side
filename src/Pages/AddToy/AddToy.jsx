@@ -6,6 +6,8 @@ const AddToy = () => {
 
 
     const { user } = useContext(AuthContext);
+    console.log(user);
+
 
     const handleBookService = event => {
         event.preventDefault();
@@ -17,8 +19,10 @@ const AddToy = () => {
         const catagories = form.catagories.value;
         const photo = form.photo.value;
         const toyName = form.toyname.value;
+        const email = user.email;
 
-        const addToy = {
+        const toy = { 
+            email,
             name,
             quantity,
             price,
@@ -28,9 +32,23 @@ const AddToy = () => {
 
         }
 
-        console.log(addToy);
+        console.log(toy);
 
-
+        fetch('http://localhost:5000/toys',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            }, 
+            body: JSON.stringify(toy)
+            
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                alert('service book successfully')
+            }
+        })
 
     }
 
