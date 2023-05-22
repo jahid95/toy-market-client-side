@@ -36,7 +36,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li className='text-red-500 mr-2 rounded-lg font-semibold'><a>Home</a></li>
-      <li className='text-red-500 mr-2 rounded-lg font-semibold'><a>All Toys</a></li>
+      <li className='text-red-500 mr-2 rounded-lg font-semibold'><Link to='/alltoy'><a>All Toys</a></Link></li>
       <li>
       {
         user && 

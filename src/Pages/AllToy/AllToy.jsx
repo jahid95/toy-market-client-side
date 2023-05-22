@@ -1,15 +1,11 @@
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
-import ToyRow from "./ToyRow";
+import { useEffect, useState } from "react";
+import ToyRow from "../MyToy/ToyRow";
 
-
-const MyToy = () => {
-    const { user } = useContext(AuthContext);
+const AllToy = () => {
+    
     const [toys, setToys] = useState([]);
 
-    const isMyToy = true;
-
-    const url = `http://localhost:5000/toys?email=${user?.email}`;
+    const url = `http://localhost:5000/toys`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -23,16 +19,12 @@ const MyToy = () => {
                 {/* head */}
                 <thead>
                     <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
+                        
                         <th>Image</th>
-                        <th>Name</th>
+                        <th>Seller</th>
                         <th>Quantity</th>
                         <th>Price</th>
-                        <th>Update</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +32,6 @@ const MyToy = () => {
                         toys.map(toy => <ToyRow
                             key={toy._id}
                             toy={toy}
-                            isMyToy={isMyToy}
                            
                         ></ToyRow>)
                     }
@@ -52,4 +43,4 @@ const MyToy = () => {
     );
 };
 
-export default MyToy;
+export default AllToy;
