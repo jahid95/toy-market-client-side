@@ -16,6 +16,29 @@ const MyToy = () => {
             .then(data => setToys(data))
     }, [url]);
 
+    const handleConfirmAddToy = id => {
+        fetch(`http://localhost:5000/toys/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: 'confirm' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    // update state
+                    const remaining = toys.filter(booking => booking._id !== id);
+                    const updated = toys.find(booking => booking._id === id);
+                    updated.status = 'confirm'
+                    const newToys = [updated, ...remaining];
+                    setToys(newToys);
+                }
+            })
+    }
+
+
     const handleDelete = id => {
         const process = confirm('Are You sure you want to delete');
         if (process) {
@@ -62,6 +85,7 @@ const MyToy = () => {
                             toy={toy}
                             isMyToy={isMyToy}
                             handleDelete={handleDelete}
+                            handleConfirmAddToy={handleConfirmAddToy}
                            
                         ></ToyRow>)
                     }
