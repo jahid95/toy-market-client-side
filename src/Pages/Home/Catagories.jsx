@@ -7,7 +7,7 @@ const Catagories = () => {
     const [showAll, setShowAll] = useState(true);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/cars')
+        fetch('https://kids-cars-assignment-server.vercel.app/cars')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])

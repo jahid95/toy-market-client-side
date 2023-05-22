@@ -6,7 +6,7 @@ const Gallery = () => {
     return (
         <div className='mb-4'>
             <h2 className='text-3xl text-left text-red-600 font-bold my-4 opacity-70 py-4 rounded-lg'>| Toys Gallery</h2>
-            <div className="carousel rounded-box">
+            <div className="md:carousel md:rounded-box">
                 <div className="carousel-item">
                     <img className='w-72 h-36' src={img1} alt="Burger" />
                 </div>
@@ -21,7 +21,7 @@ const Gallery = () => {
                 </div>
 
             </div>
-            <div className="carousel rounded-box">
+            <div className="md:carousel md:rounded-box">
                 <div className="carousel-item">
                     <img className='w-72 h-36' src={img1} alt="Burger" />
                 </div>

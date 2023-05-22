@@ -9,7 +9,7 @@ const MyToy = () => {
 
     const isMyToy = true;
 
-    const url = `http://localhost:5000/toys?email=${user?.email}`;
+    const url = `https://kids-cars-assignment-server.vercel.app/toys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -17,7 +17,7 @@ const MyToy = () => {
     }, [url]);
 
     const handleConfirmAddToy = id => {
-        fetch(`http://localhost:5000/toys/${id}`, {
+        fetch(`https://kids-cars-assignment-server.vercel.app/toys/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const MyToy = () => {
     const handleDelete = id => {
         const process = confirm('Are You sure you want to delete');
         if (process) {
-            fetch(`http://localhost:5000/toys/${id}`, {
+            fetch(`https://kids-cars-assignment-server.vercel.app/toys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

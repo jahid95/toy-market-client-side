@@ -5,7 +5,7 @@ const AllToy = () => {
     
     const [toys, setToys] = useState([]);
 
-    const url = `http://localhost:5000/toys`;
+    const url = `https://kids-cars-assignment-server.vercel.app/toys`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
