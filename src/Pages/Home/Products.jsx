@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Products = ({ product }) => {
+    const {loading} = useContext(AuthContext)
+    if(loading){
+        return <progress className="progress w-56"></progress>
+    }
     const {image,_id} = product;
     return (
         <div>
