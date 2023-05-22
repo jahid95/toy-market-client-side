@@ -13,7 +13,7 @@ const AllToy = () => {
     }, [url]);
     return (
         <div>
-        <h2 className="text-5xl">Your bookings: {toys.length}</h2>
+       
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
                 {/* head */}
