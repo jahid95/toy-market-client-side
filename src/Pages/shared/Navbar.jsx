@@ -50,7 +50,7 @@ const Navbar = () => {
           
         }
       </li>
-      <li className='text-red-500 mr-2 rounded-lg font-semibold'><a>Blogs</a></li>
+      <li className='text-red-500 mr-2 rounded-lg font-semibold'><Link to='/blogs'><a>Blogs</a></Link></li>
     </ul>
   </div>
   <div className="navbar-end">

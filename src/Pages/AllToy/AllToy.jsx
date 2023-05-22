@@ -17,7 +17,7 @@ const AllToy = () => {
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
                 {/* head */}
-                <thead>
+                <thead className="text-red-600 font-semibold">
                     <tr>
                         
                         <th>Image</th>

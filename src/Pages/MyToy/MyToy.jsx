@@ -15,13 +15,33 @@ const MyToy = () => {
             .then(res => res.json())
             .then(data => setToys(data))
     }, [url]);
+
+    const handleDelete = id => {
+        const process = confirm('Are You sure you want to delete');
+        if (process) {
+            fetch(`http://localhost:5000/toys/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    
+                    if (data.deletedCount > 0) {
+                        alert('deleted successful');
+                        const remaining = toys.filter(toy => toy._id !== id);
+                        setToys(remaining);
+                    }
+                })
+        }
+    }
+
+
     return (
         <div>
         
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
                 {/* head */}
-                <thead>
+                <thead className="text-red-600">
                     <tr>
                         <th>
                             <label>
@@ -41,6 +61,7 @@ const MyToy = () => {
                             key={toy._id}
                             toy={toy}
                             isMyToy={isMyToy}
+                            handleDelete={handleDelete}
                            
                         ></ToyRow>)
                     }
