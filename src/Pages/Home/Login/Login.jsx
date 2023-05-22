@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../../../../src/assets/login/Capture-removebg-preview.png';
 import google from '../../../assets/login/google-sign-in-2023-01-04 00-00-00-2023-03-13 13-05-41.png';
 import { useContext } from 'react';
@@ -13,11 +13,17 @@ const Login = () => {
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log('login page location', location)
+  const from = location.state?.from?.pathname || '/'
+
   const handleSignGoogle =()=>{
       signInWithPopup(auth,provider)
       .then(result =>{
           const user = result.user;
           console.log('google',user);
+          navigate(from, { replace: true })
       })
       .catch(error => {
           console.log('error', error.message);
@@ -36,6 +42,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true })
             })
             .catch(error => console.log(error));
 

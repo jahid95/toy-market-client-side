@@ -10,13 +10,18 @@ const Catagories = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
+
+    const handleShowMore =()=>{
+        
+    }
     return (
         <div>
             <h2 className="text-3xl text-red-600 font-bold">| Products</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
             {
-                products.map(product => <Products key={product.id} product={product}></Products>)
+                products.slice(0,5).map(product => <Products key={product.id} product={product}></Products>)
             }
+            <button onClick={()=>handleShowMore}>Show More</button>
             </div>
         </div>
     );
