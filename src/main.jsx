@@ -12,6 +12,7 @@ import Register from './Pages/Home/Login/Register';
 import AuthProvider from './Provider/AuthProvider';
 import Detail from './Pages/Details/Detail';
 import AddToy from './Pages/AddToy/AddToy';
+import MyToy from './Pages/MyToy/MyToy';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: 'detail/:id',
         element:<Detail></Detail>,
         loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+      },
+      {
+        path: 'mytoy',
+        element: <MyToy></MyToy>
       }
     ]
   },

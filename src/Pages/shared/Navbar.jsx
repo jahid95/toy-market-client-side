@@ -46,7 +46,7 @@ const Navbar = () => {
       </li>
       <li>
         {
-          user && <Link to='/addtoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>My Toys</a></Link>
+          user && <Link to='/mytoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>My Toys</a></Link>
           
         }
       </li>
