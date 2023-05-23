@@ -23,7 +23,7 @@ const Catagories = () => {
             <div>
                 {showAll?( <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
                     {
-                products.slice(0,6).map(product => <Products key={product.id} product={product}></Products>)
+                products.slice(0,20).map(product => <Products key={product.id} product={product}></Products>)
             }
                 </div>) : (<div className="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
                 {

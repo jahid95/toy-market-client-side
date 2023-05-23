@@ -7,17 +7,17 @@ const Products = ({ product }) => {
     if(loading){
         return <progress className="progress w-56"></progress>
     }
-    const {image,_id} = product;
+    const {image,_id,price,name,rating} = product;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img className="h-44" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                        Cars
-                        <div className="badge badge-secondary">$ 15</div>
+                        {name}
+                        <div className="badge badge-secondary">$ {price}5</div>
                     </h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Rating: {rating}</p>
                     <div className="card-actions justify-end">
                         <div className="badge badge-outline bg-red-600 text-white px-4 py-4">Buy Now</div>
                         <Link to={`/detail/${_id}`} className="badge badge-outline  text-red-600 px-4 py-4">View Details</Link>

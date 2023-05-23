@@ -50,19 +50,21 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
       <li className='text-red-500 mr-2 rounded-lg font-semibold'><Link to='/'><a>Home</a></Link></li>
       <li className='text-red-500 mr-2 rounded-lg font-semibold'><Link to='/alltoy'><a>All Toys</a></Link></li>
-      <li>
+      
       {
-        user && 
-        <Link to='/addtoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>Add Toys</a></Link>
         
+        user && 
+        <li><Link to='/addtoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>Add Toys</a></Link>
+        </li>
       }
-      </li>
-      <li>
+     
+     
         {
-          user && <Link to='/mytoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>My Toys</a></Link>
-          
+           
+          user && <li><Link to='/mytoy' className='text-red-500 mr-2 rounded-lg font-semibold'><a>My Toys</a></Link>
+          </li>
         }
-      </li>
+      
       <li className='text-red-500 mr-2 rounded-lg font-semibold'><Link to='/blogs'><a>Blogs</a></Link></li>
     </ul>
   </div>
