@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 const AddToy = () => {
@@ -7,6 +9,8 @@ const AddToy = () => {
 
     const { user } = useContext(AuthContext);
     console.log(user);
+
+    const MySwal = withReactContent(Swal)
 
 
     const handleBookService = event => {
@@ -46,7 +50,11 @@ const AddToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('service book successfully')
+                MySwal.fire({
+                    title: <strong>Add Toy  Successfully</strong>,
+                    html: <i>You clicked the button!</i>,
+                    icon: 'success'
+                  })
             }
         })
 

@@ -1,6 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ToyRow from "./ToyRow";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 
 const MyToy = () => {
@@ -49,7 +53,11 @@ const MyToy = () => {
                 .then(data => {
                     
                     if (data.deletedCount > 0) {
-                        alert('deleted successful');
+                        MySwal.fire({
+                            title: <strong>Delete Successfully</strong>,
+                            html: <i>You clicked the button!</i>,
+                            icon: 'success'
+                          })
                         const remaining = toys.filter(toy => toy._id !== id);
                         setToys(remaining);
                     }
