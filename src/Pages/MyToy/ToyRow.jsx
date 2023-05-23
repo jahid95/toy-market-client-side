@@ -24,12 +24,14 @@ const ToyRow = ({toy,isMyToy,handleDelete,handleConfirmAddToy}) => {
         <td>{quantity}</td>
         <td>${price}</td>
 
-        <th>
-                {
-                    status === 'confirm' ? <span className="font-bold text-primary">Approved</span> :
-                        <button onClick={() => handleConfirmAddToy(_id)} className="btn btn-ghost btn-xs">Please Approve</button>
-                }
-            </th>
+        {
+            isMyToy && <th>
+            {
+                status === 'confirm' ? <span className="font-bold text-primary">Approved</span> :
+                    <button onClick={() => handleConfirmAddToy(_id)} className="btn btn-ghost btn-xs">Please Approve</button>
+            }
+        </th>
+        }
       
     </tr>
     );
